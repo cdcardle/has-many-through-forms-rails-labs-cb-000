@@ -11,7 +11,7 @@
 
 <fieldset>
   <h4>New Comment:</h4>
-  <%= form_for(@comment, url: @post) do |f| %>
+  <%= form_for(@comment, url: post_path(@post)) do |f| %>
     <p>
       <%= f.label :content %>
       <%= f.text_area :content %>
