@@ -12,7 +12,7 @@
 <fieldset>
   <h4>New Comment:</h4>
   <%= form_for(@comment, url: post_path(@comment.post.id)) do |f| %>
-    <%= f.collection_select :user_id, @users, :id, :name, include_blank: true %>
+    <%= f.collection_select :user_id, Users, :id, :name, include_blank: true %>
     <p>
       <%= f.label :content %>
       <%= f.text_area :content %>
