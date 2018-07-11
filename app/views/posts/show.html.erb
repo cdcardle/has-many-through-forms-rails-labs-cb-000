@@ -11,14 +11,11 @@
 
 <fieldset>
   <h4>New Comment:</h4>
-  <%= form_for @post do |f| %>
-    <%= f.fields_for :comments do |comment_builder| %>
+  <%= form_for @comment do |f| %>
     <p>
-      <%= comment_builder.label :content %>
-      <%= comment_builder.text_area :content %>
+      <%= f.label :content %>
+      <%= f.text_area :content %>
     </p>
-      <%= comment_builder.hidden_field :post %>
-    <% end %>
   <% end %>
 </fieldset>
 
