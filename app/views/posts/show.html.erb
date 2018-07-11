@@ -11,7 +11,7 @@
 
 <fieldset>
   <h4>New Comment:</h4>
-  <%= form_for @post.comments do |f| %>
+  <%= form_for @post do |f| %>
     <%= f.fields_for :comments do |comment_builder| %>
     <p>
       <%= comment_builder.label :content %>
