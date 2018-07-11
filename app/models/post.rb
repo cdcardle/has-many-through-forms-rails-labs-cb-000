@@ -15,6 +15,7 @@ class Post < ActiveRecord::Base
   end
 
   def comments_attributes=(comment_attributes)
+    raise comments_attributes.inspect
     comment_attributes.values.each do |comment_attribute|
       comment = Comment.find_or_create_by(comment_attribute)
       self.comments << comment
