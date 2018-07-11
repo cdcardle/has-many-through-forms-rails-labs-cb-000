@@ -9,12 +9,16 @@
   <% end %>
 </p>
 
-<h4>New Comment:</h4>
-<%= form_for @post do |f| %>
-  <%= f.fields_for :comments do |comment_builder| %>
-    <%= comment_builder.label : %>
+<fieldset>
+  <h4>New Comment:</h4>
+  <%= form_for @post do |f| %>
+    <%= f.fields_for :comments do |comment_builder| %>
+    <p>
+      <%= comment_builder.label :content %>
+      <%= comment_builder.text_area :content %>
+    <% end %>
   <% end %>
-<% end %>
+</fieldset>
 
 <h4>Users who commented:</h4>
 <p>
